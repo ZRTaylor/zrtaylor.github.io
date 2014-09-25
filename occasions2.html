@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  <style>
+    html {
+      text-align: center;
+      background-color: blue;
+    }
+      h1{ font-family: arial;
+          font-size: 120%;
+        }
+      p{ font-family: arial;}
+  </style>
+		<img src="BirthdayCake.jpg" alt="Birthday Cake" style="width:350px;height:228px">
+    <h1><strong>Dates to Remember</strong></h1>
+	</head>
+	<body>
+		<p >Occasion to remember</p>
+		<input type="text" id="myTextField" placeholder="What do you need to remember?" style="width: 200px;"/>
+		<p >Date of Occasion (mm/dd)</p>
+		<input type="text" id="myDate" placeholder="What date is it?" style="width: 100px;"/>
+		<br>
+		<input type="submit" id="byBtn" value="Enter" onclick="change()"/>
+		<br>
+    <p id ="title"><p> <p id ="newdate"></p>
+
+		<script>
+    		function change(){
+    
+   				var myNewOccasion = document.getElementById('myTextField').value;
+   				var myNewDate = document.getElementById('myDate').value;
+   				if( myNewOccasion.length==0 ){
+       				alert('Write Some real Text please.');
+   					return;
+   				}
+   				if( myNewDate.length==0){
+       				alert('Youre not going to remember the date if you dont enter it.');        
+   					return;
+   				}
+   
+   				var occasion = document.getElementById('title');
+   				occasion.innerHTML = myNewOccasion;
+   				var date = document.getElementById('newdate');
+   				date.innerHTML = myNewDate;
+			}
+		</script>
+
+  </body>
+</html>
